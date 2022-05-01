@@ -1,6 +1,6 @@
 import styled from "styled-components/macro";
 
-import { mobile } from "styles/breakpoints";
+import { mobile, tablet } from "styles/breakpoints";
 import { Colors } from "styles/theme";
 
 interface SectionWrapperStyles {
@@ -9,12 +9,17 @@ interface SectionWrapperStyles {
 }
 
 export const SectionWrapper = styled.section<SectionWrapperStyles>`
-  padding: 3rem 0;
+  position: "relative";
+  padding: "4rem";
   min-height: ${({ minHeight }) => minHeight || ""};
   background-color: ${({ backgroundColor, theme }) =>
     backgroundColor ? theme.colors[backgroundColor] : ""};
 
+  @media ${tablet} {
+    padding: 3rem;
+  }
+
   @media ${mobile} {
-    padding: 2rem 0;
+    padding: 2rem;
   }
 `;

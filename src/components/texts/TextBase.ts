@@ -13,10 +13,10 @@ interface TextBaseStyles {
 }
 
 export const TextBase = styled.p<TextBaseStyles>`
-  margin: ${({ margin }) => margin || ""};
+  margin: ${({ margin }) => margin || "1rem"};
   font-size: ${({ fontSize }) => fontSize || ""};
   font-weight: ${({ fontWeight }) => fontWeight || 400};
-  color: ${({ color }) => color || theme.colors.white};
+  color: ${({ color }) => color || theme.colors.black};
   text-align: ${({ textAlign }) => textAlign || ""};
   text-decoration: ${({ textDecoration }) => textDecoration || ""};
   text-transform: ${({ textTransform }) => textTransform || ""};

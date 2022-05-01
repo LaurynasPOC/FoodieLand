@@ -5,11 +5,16 @@ const colors = {
   secondary: "#29C0CD",
   accent: "#E34578",
   white: "#ffffff",
+  black: "#000000",
 };
 
 export const theme = {
   colors,
-  fontFamily: { primary: "Red Hat Display" },
+  borders: {},
+  borderRadius: {
+    base: "1.875rem",
+  },
+  fontFamily: { primary: "Inter" },
   fontSizes: {
     fs16: "1rem",
   },
@@ -87,6 +92,12 @@ export const theme = {
         fontWeight: 600,
         lineHeight: "2.625rem",
       },
+    },
+    zIndex: {
+      base: 0,
+      upperElement: 1,
+      modal: 10,
+      loader: 11,
     },
   },
 } as const;
