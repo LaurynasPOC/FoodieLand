@@ -28,6 +28,9 @@ import chickenAndRice from "assets/images/chickenandrice.png";
 import creamyChicken from "assets/images/creamychicken.png";
 import heart from "assets/images/fullHeart.svg";
 import emptyHeart from "assets/images/emtyheart.svg";
+import tomato from "assets/images/tomato.png";
+import onion from "assets/images/onion.png";
+import chief from "assets/images/chief.png";
 
 export type Visuals = keyof typeof visuals;
 export const visuals: Record<string, string> = {
@@ -61,4 +64,7 @@ export const visuals: Record<string, string> = {
   creamyChicken,
   heart,
   emptyHeart,
+  onion,
+  tomato,
+  chief,
 };

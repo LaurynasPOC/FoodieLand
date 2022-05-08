@@ -1,7 +1,7 @@
 export type Colors = keyof typeof colors;
 
 const colors = {
-  bannerBG: "#E7FAFE",
+  lightBlueBG: "#E7FAFE",
   secondary: "#29C0CD",
   accent: "#E34578",
   baseWhite: "#ffffff",
@@ -38,6 +38,7 @@ export const theme = {
     lh8: "0.5rem",
     lh16: "1rem",
     lh24: "1.5rem",
+    lh28: "1.75rem",
     lh32: "2rem",
   },
   breakpoints: ["24rem", "48rem", "90rem"] as unknown as Breakpoints,

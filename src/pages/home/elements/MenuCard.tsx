@@ -27,7 +27,7 @@ const MenuCard: React.FC<MenuProps> = ({ title, img, alt, category }) => {
         )}
       </Box>
 
-      <Box maxHeight="24rem" bg="bannerBG" borderRadius="primary">
+      <Box maxHeight="24rem" bg="lightBlueBG" borderRadius="primary">
         <Image
           width="100%"
           borderRadius="1.875rem 1.875rem 0 0"

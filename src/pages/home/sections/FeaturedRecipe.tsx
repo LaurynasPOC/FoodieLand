@@ -13,7 +13,7 @@ const FeaturedRecipe = () => (
         borderBottomLeftRadius={["none", "none", "primary"]}
         borderTopLeftRadius={["primary", "primary", "primary"]}
         borderTopRightRadius={["primary", "primary", "none"]}
-        bg="bannerBG"
+        bg="lightBlueBG"
         width={["", "", "660px"]}
       >
         <BaseButton type="submit" borderRadius="primary" bg="baseWhite">

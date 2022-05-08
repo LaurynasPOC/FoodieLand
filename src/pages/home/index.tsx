@@ -5,7 +5,9 @@ import FeaturedRecipe from "./sections/FeaturedRecipe";
 import NavbarSection from "./sections/NavbarSection";
 import CategoriesSection from "./sections/CategoriesSection";
 import { Box } from "components";
+
 import MenuSection from "./sections/MenuSection";
+import ChiefSection from "./sections/ChiefSection";
 
 const Home: React.FC = () => (
   <>
@@ -29,6 +31,7 @@ const Home: React.FC = () => (
         tempor incididunt ut labore et dolore magna aliqut enim ad minim{" "}
       </Box>
       <MenuSection />
+      <ChiefSection />
     </Container>
   </>
 );
