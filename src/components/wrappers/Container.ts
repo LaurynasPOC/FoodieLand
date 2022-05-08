@@ -6,9 +6,9 @@ import { Theme } from "styles/theme";
 interface ContainerStyles<T> extends ColorProps<T>, DisplayProps<T> {}
 
 export const Container = styled.div<ContainerStyles<Theme>>`
-  margin: "0 auto";
-  padding: "0 1 rem";
-  max-width: "72rem";
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 72rem;
   ${color};
   ${display};
   @media ${tablet} {

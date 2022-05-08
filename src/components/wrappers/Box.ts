@@ -48,15 +48,18 @@ export interface BoxStyles<T>
     BorderRadiusProps<T>,
     ColorProps<T>,
     PositionProps<T>,
-    ZIndexProps<T>,
     DisplayProps<T>,
     BoxShadowProps<T>,
     LayoutProps<T>,
     ShadowProps<T>,
     TextAlignProps<T>,
-    SpaceProps<T> {}
+    SpaceProps<T>,
+    ZIndexProps<T> {
+  backgroundImage?: string;
+}
 
 export const Box = styled.div<BoxStyles<Theme>>`
+  background-image: ${({ backgroundImage }) => backgroundImage || ""};
   && {
     ${boxProps};
   }

@@ -4,6 +4,6 @@ import { Box } from "./Box";
 import { Theme } from "styles/theme";
 
 export const FlexWrapper = styled(Box)<FlexboxProps<Theme>>`
-  display: "flex";
+  display: flex;
   ${flexbox};
 `;

@@ -1,12 +1,17 @@
 import styled from "styled-components/macro";
 import { Box } from "./Box";
-import { tablet } from "styles/breakpoints";
+import { mobile, tablet } from "styles/breakpoints";
 
 export const ContentWrapper = styled(Box)`
-  margin: "0 auto";
-  padding: "0 1rem";
-  max-width: "58rem";
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: flex;
+  justify-content: center;
+
   @media ${tablet} {
-    max-width: 100%;
+    padding: 0 2rem;
+  }
+  @media ${mobile} {
+    padding: 0 1rem;
   }
 `;

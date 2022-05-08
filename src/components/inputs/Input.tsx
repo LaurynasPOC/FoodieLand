@@ -15,8 +15,36 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   minValue?: number;
   maxValue?: number;
   message?: string;
+  value?: string | number;
   label?: string;
   placeholder?: string;
   type?: InputTypes;
   onChange?: () => void;
 }
+
+export const InputField: React.FC<InputProps & BoxStyles<Theme>> = ({
+  error,
+  minValue,
+  maxValue,
+  label,
+  type,
+  value,
+  placeholder,
+  onChange,
+  ...props
+}) => (
+  <Box>
+    {label && <label htmlFor="input">{label}</label>}
+    <input
+      id={label}
+      value={value}
+      type={type}
+      placeholder={placeholder}
+      min={minValue}
+      max={maxValue}
+      onChange={onChange}
+      {...props}
+    />
+    {error && <span>{error}</span>}
+  </Box>
+);
