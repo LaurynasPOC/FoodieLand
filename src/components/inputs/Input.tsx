@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, BoxStyles } from "components/wrappers/Box";
+import { BaseButton } from "components/buttons/elements/BaseButton";
 import { Theme } from "styles/theme";
 
 export type InputTypes =
@@ -22,7 +23,7 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   onChange?: () => void;
 }
 
-export const InputField: React.FC<InputProps & BoxStyles<Theme>> = ({
+export const Input: React.FC<InputProps & BoxStyles<Theme>> = ({
   error,
   minValue,
   maxValue,
@@ -33,9 +34,20 @@ export const InputField: React.FC<InputProps & BoxStyles<Theme>> = ({
   onChange,
   ...props
 }) => (
-  <Box>
+  <Box
+    position="relative"
+    margin="auto"
+    mt="s20"
+    borderRadius="blackBtn"
+    bg="baseWhite"
+  >
     {label && <label htmlFor="input">{label}</label>}
     <input
+      style={{
+        border: "none",
+        maxWidth: "480px",
+        height: "5rem",
+      }}
       id={label}
       value={value}
       type={type}
@@ -45,6 +57,18 @@ export const InputField: React.FC<InputProps & BoxStyles<Theme>> = ({
       onChange={onChange}
       {...props}
     />
+    <BaseButton
+      color="baseWhite"
+      position="absolute"
+      top="1rem"
+      right="1rem"
+      bg="baseBlack"
+      borderRadius="blackBtn"
+      px="s32"
+      py="s16"
+    >
+      Subscribe
+    </BaseButton>
     {error && <span>{error}</span>}
   </Box>
 );

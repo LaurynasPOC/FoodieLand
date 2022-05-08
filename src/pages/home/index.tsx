@@ -8,6 +8,7 @@ import { Box } from "components";
 
 import MenuSection from "./sections/MenuSection";
 import ChiefSection from "./sections/ChiefSection";
+import SubscribeSection from "./sections/SubscribeSection";
 
 const Home: React.FC = () => (
   <>
@@ -32,6 +33,7 @@ const Home: React.FC = () => (
       </Box>
       <MenuSection />
       <ChiefSection />
+      <SubscribeSection />
     </Container>
   </>
 );
