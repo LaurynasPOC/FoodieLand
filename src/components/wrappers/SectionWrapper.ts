@@ -1,20 +1,19 @@
 import styled from "styled-components/macro";
 
-import { mobile } from "styles/breakpoints";
+import { mobile, tablet } from "styles/breakpoints";
 import { Colors } from "styles/theme";
 
 interface SectionWrapperStyles {
   minHeight?: string;
   backgroundColor?: Colors;
+  borderBottom?: string;
 }
 
 export const SectionWrapper = styled.section<SectionWrapperStyles>`
-  padding: 3rem 0;
+  position: relative;
+  padding: 2rem 0;
   min-height: ${({ minHeight }) => minHeight || ""};
   background-color: ${({ backgroundColor, theme }) =>
     backgroundColor ? theme.colors[backgroundColor] : ""};
-
-  @media ${mobile} {
-    padding: 2rem 0;
-  }
+  border-bottom: ${({ borderBottom }) => borderBottom || ""};
 `;

@@ -4,6 +4,8 @@ import {
   AlignSelfProps,
   border,
   BorderProps,
+  borderRadius,
+  BorderRadiusProps,
   BoxShadowProps,
   color,
   ColorProps,
@@ -27,30 +29,37 @@ import {
 import { Theme } from "styles/theme";
 
 const boxProps = compose(
-  space,
+  alignSelf,
+  border,
+  borderRadius,
   color,
   display,
-  position,
-  zIndex,
   layout,
-  border,
+  position,
+  space,
   shadow,
-  textAlign
+  textAlign,
+  zIndex
 );
 
-interface Styles<T>
-  extends BorderProps<T>,
+export interface BoxStyles<T>
+  extends AlignSelfProps<T>,
+    BorderProps<T>,
+    BorderRadiusProps<T>,
     ColorProps<T>,
     PositionProps<T>,
-    ZIndexProps<T>,
     DisplayProps<T>,
     BoxShadowProps<T>,
     LayoutProps<T>,
     ShadowProps<T>,
     TextAlignProps<T>,
-    SpaceProps<T> {}
+    SpaceProps<T>,
+    ZIndexProps<T> {
+  backgroundImage?: string;
+}
 
-export const Box = styled.div<Styles<Theme>>`
+export const Box = styled.div<BoxStyles<Theme>>`
+  background-image: ${({ backgroundImage }) => backgroundImage || ""};
   && {
     ${boxProps};
   }
